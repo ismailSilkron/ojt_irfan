@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ojt_irfan/screen/auth/view/login_screen.dart';
+import 'package:ojt_irfan/screen/auth/view/register_screen.dart';
 import 'package:ojt_irfan/screen/home/view/home_screen.dart';
 import 'package:ojt_irfan/utils/constant/path_route.dart';
 
@@ -12,6 +14,17 @@ class AppRouter {
         return _generatePageRoute(
           settings,
           (context) => const HomeScreen(),
+        );
+      case PathRoute.loginScreen:
+        return _generatePageRoute(
+          settings,
+          (context) => const LoginScreen(),
+        );
+
+      case PathRoute.registerScreen:
+        return _generatePageRoute(
+          settings,
+          (context) => const RegisterScreen(),
         );
 
       default:

@@ -6,6 +6,7 @@ import 'package:ojt_irfan/config/theme/app_pallete.dart';
 import 'package:ojt_irfan/screen/home/bloc/home_bloc.dart';
 import 'package:ojt_irfan/screen/home/model/category.dart';
 import 'package:ojt_irfan/utils/constant/image_asset.dart';
+import 'package:ojt_irfan/utils/constant/path_route.dart';
 import 'package:ojt_irfan/utils/widget/show_snackbar.dart';
 
 part '../home_helper.dart';

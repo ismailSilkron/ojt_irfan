@@ -7,9 +7,18 @@ class AppTheme {
         appBarTheme: _appBarTheme(context, Brightness.light),
         colorScheme: const ColorScheme.light().copyWith(
           background: AppPallete.pinkColor,
+          primary: Colors.black,
         ),
         scaffoldBackgroundColor: AppPallete.whiteColor,
         // textTheme: _textTheme(context, Brightness.light),
+        inputDecorationTheme: InputDecorationTheme(
+          contentPadding: const EdgeInsets.all(27),
+          // enableBorder only displayed when it is not focused (click)
+          enabledBorder: _border(),
+          // focusedBorder only displayed when user using it (typing/click)
+          focusedBorder: _border(AppPallete.gradient2),
+          border: _border(),
+        ),
       );
 
   static ThemeData darkThemeMode(BuildContext context) =>
@@ -17,6 +26,14 @@ class AppTheme {
         scaffoldBackgroundColor: AppPallete.backgroundColor,
         appBarTheme: _appBarTheme(context, Brightness.dark),
         // textTheme: _textTheme(context, Brightness.dark),
+      );
+
+  static _border([Color color = AppPallete.borderColor]) => OutlineInputBorder(
+        borderSide: BorderSide(
+          color: color,
+          width: 3,
+        ),
+        borderRadius: BorderRadius.circular(10),
       );
 
   static AppBarTheme _appBarTheme(
@@ -36,6 +53,11 @@ class AppTheme {
         backgroundColor: brightness == Brightness.dark
             ? AppPallete.backgroundColor
             : AppPallete.whiteColor,
+        iconTheme: IconThemeData(
+          color: brightness == Brightness.dark
+              ? AppPallete.whiteColor
+              : Colors.black,
+        ),
       );
 
   static TextTheme _textTheme(BuildContext context, Brightness brightness) {

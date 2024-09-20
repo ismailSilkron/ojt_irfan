@@ -10,7 +10,9 @@ AppBar _homeAppBar(BuildContext context) => AppBar(
           borderRadius: BorderRadius.circular(10),
         ),
         child: IconButton(
-          onPressed: () {},
+          onPressed: () async {
+            await Navigator.of(context).pushNamed(PathRoute.loginScreen);
+          },
           icon: const Icon(
             Icons.account_circle_rounded,
             color: AppPallete.grayColor,
