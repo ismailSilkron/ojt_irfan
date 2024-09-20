@@ -2,6 +2,21 @@ part of './view/home_screen.dart';
 
 AppBar _homeAppBar(BuildContext context) => AppBar(
       title: const Text("Breakfast"),
+      leading: Container(
+        margin: const EdgeInsets.all(8),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: const Color(0xFFF7F8F8),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.account_circle_rounded,
+            color: AppPallete.grayColor,
+          ),
+        ),
+      ),
     );
 
 Container _searchField(

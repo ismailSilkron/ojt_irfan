@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ojt_irfan/config/router/app_router.dart';
 
 import 'package:ojt_irfan/config/theme/app_theme.dart';
 import 'package:ojt_irfan/screen/home/view/home_screen.dart';
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const HomeScreen(),
+      navigatorKey: AppRouter.navigatorKey,
+      onGenerateRoute: AppRouter.generatePageList,
       theme: AppTheme.lightThemeMode(context),
       debugShowCheckedModeBanner: false,
     );

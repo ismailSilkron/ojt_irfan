@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:ojt_irfan/config/theme/app_pallete.dart';
 import 'package:ojt_irfan/screen/home/bloc/home_bloc.dart';
 import 'package:ojt_irfan/screen/home/model/category.dart';
 import 'package:ojt_irfan/utils/constant/image_asset.dart';
