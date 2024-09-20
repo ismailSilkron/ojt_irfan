@@ -5,14 +5,14 @@ class AppTheme {
   static ThemeData lightThemeMode(BuildContext context) =>
       ThemeData.light().copyWith(
         appBarTheme: _appBarTheme(context, Brightness.light),
-        textTheme: _textTheme(context, Brightness.light),
+        // textTheme: _textTheme(context, Brightness.light),
       );
 
   static ThemeData darkThemeMode(BuildContext context) =>
       ThemeData.dark().copyWith(
         scaffoldBackgroundColor: AppPallete.backgroundColor,
         appBarTheme: _appBarTheme(context, Brightness.dark),
-        textTheme: _textTheme(context, Brightness.dark),
+        // textTheme: _textTheme(context, Brightness.dark),
       );
 
   static AppBarTheme _appBarTheme(
