@@ -5,6 +5,10 @@ class AppTheme {
   static ThemeData lightThemeMode(BuildContext context) =>
       ThemeData.light().copyWith(
         appBarTheme: _appBarTheme(context, Brightness.light),
+        colorScheme: const ColorScheme.light().copyWith(
+          background: AppPallete.pinkColor,
+        ),
+        scaffoldBackgroundColor: AppPallete.whiteColor,
         // textTheme: _textTheme(context, Brightness.light),
       );
 
@@ -25,8 +29,13 @@ class AppTheme {
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 16,
-          color: brightness == Brightness.dark ? AppPallete.whiteColor : null,
+          color: brightness == Brightness.dark
+              ? AppPallete.whiteColor
+              : Colors.black,
         ),
+        backgroundColor: brightness == Brightness.dark
+            ? AppPallete.backgroundColor
+            : AppPallete.whiteColor,
       );
 
   static TextTheme _textTheme(BuildContext context, Brightness brightness) {

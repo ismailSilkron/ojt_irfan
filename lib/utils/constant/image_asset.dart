@@ -9,6 +9,9 @@ class CommonAsset {
   final String bluePancakeIcon = "$_iconDir/blueberry-pancake.svg";
   final String buttonIcon = "$_iconDir/button.svg";
   final String canaiBreadIcon = "$_iconDir/canai-bread.svg";
+  final String filterIcon = "$_iconDir/Filter.svg";
+  final String plateIcon = "$_iconDir/plate.svg";
+  final String searchIcon = "$_iconDir/Search.svg";
 
   const CommonAsset();
 }
