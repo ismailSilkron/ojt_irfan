@@ -18,6 +18,11 @@ class AppTheme {
           // focusedBorder only displayed when user using it (typing/click)
           focusedBorder: _border(AppPallete.gradient2),
           border: _border(),
+          disabledBorder: _border(AppPallete.grayColor),
+          errorBorder: _border(Colors.red),
+          errorStyle: Theme.of(context).textTheme.labelLarge?.copyWith(
+                color: Colors.red[700],
+              ),
         ),
       );
 
@@ -28,7 +33,8 @@ class AppTheme {
         // textTheme: _textTheme(context, Brightness.dark),
       );
 
-  static _border([Color color = AppPallete.borderColor]) => OutlineInputBorder(
+  static OutlineInputBorder _border([Color color = AppPallete.borderColor]) =>
+      OutlineInputBorder(
         borderSide: BorderSide(
           color: color,
           width: 3,
