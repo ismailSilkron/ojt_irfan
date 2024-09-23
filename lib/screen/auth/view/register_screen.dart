@@ -66,8 +66,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Navigator.of(context).pop();
             }
             if (mounted) {
+              showSnackbar(context: context, message: "Successfully register");
+            }
+            if (mounted) {
               await Navigator.pushReplacementNamed(
-                  context, PathRoute.homeScreen);
+                context,
+                PathRoute.homeScreen,
+                arguments: {
+                  "username": state.user.name,
+                },
+              );
             }
           }
         },

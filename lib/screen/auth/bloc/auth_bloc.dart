@@ -17,7 +17,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       emit(AuthLoading());
 
-      final userData = await User.addNewUser(
+      await Future.delayed(const Duration(seconds: 2));
+
+      final User? userData = await User.addNewUser(
         username: event.name,
         email: event.email,
         password: event.password,
